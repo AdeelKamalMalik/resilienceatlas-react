@@ -66,5 +66,5 @@ namespace :deploy do
     end
   end
 
-  # before "symlink:release", :build_app
+  before "symlink:release", :build_app
 end
