@@ -2,13 +2,17 @@
 lock "3.4.0"
 
 set :application, "ResilienceAtlasReact"
-set :repo_url, "https://github.com/ConservationInternational/resilienceatlas-react.git"
+set :repo_url, "git@github.com:AdeelKamalMalik/resilienceatlas-react.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
+
+set :nvm_type, :user
+set :nvm_node, 'v13.7.0'
+set :nvm_map_bins, %w{node npm yarn}
 set :deploy_to, '/home/ubuntu/resilienceatlas-react'
 
 # Default value for :format is :airbrussh.
@@ -42,8 +46,8 @@ set :keep_releases, 2
 # set :ssh_options, verify_host_key: :secure
 
 # RVM
-set :rvm_ruby_version, '2.2.1'
-set :rvm_custom_path, '/usr/share/rvm'
+set :rvm_ruby_version, '3.0.2'
+set :rvm_custom_path, '/home/ubuntu/.rvm/'
 
 # Yarn
 # set :yarn_target_path, -> { release_path.join('subdir') } # default not set
